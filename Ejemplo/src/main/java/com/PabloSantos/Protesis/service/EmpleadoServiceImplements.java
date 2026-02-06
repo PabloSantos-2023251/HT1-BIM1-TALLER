@@ -31,7 +31,8 @@ public class EmpleadoServiceImplements implements EmpleadoService {
 
     @Override
     public Empleado updateEmpleado(Integer id, Empleado empleado) {
-        return null;
+        empleado.setId_empleado(id);
+        return empleadoRepository.save(empleado);
     }
 
     @Override
