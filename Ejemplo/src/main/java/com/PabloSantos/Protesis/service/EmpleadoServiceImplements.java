@@ -1,6 +1,6 @@
 package com.PabloSantos.Protesis.service;
 
-import com.PabloSantos.Protesis.model.Empleado;
+import com.PabloSantos.Protesis.entity.Empleado;
 import com.PabloSantos.Protesis.repository.EmpleadoRepository;
 import org.springframework.stereotype.Service;
 

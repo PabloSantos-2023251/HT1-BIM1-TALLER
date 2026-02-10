@@ -1,6 +1,6 @@
 package com.PabloSantos.Protesis.controller;
 
-import com.PabloSantos.Protesis.model.Empleado;
+import com.PabloSantos.Protesis.entity.Empleado;
 import com.PabloSantos.Protesis.service.EmpleadoService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

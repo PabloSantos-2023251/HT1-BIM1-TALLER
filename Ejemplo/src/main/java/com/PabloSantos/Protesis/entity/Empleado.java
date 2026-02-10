@@ -1,4 +1,4 @@
-package com.PabloSantos.Protesis.model;
+package com.PabloSantos.Protesis.entity;
 
 import jakarta.persistence.*;
 
