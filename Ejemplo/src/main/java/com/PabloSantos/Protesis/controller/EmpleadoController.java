@@ -28,6 +28,12 @@ public class EmpleadoController {
 
             if (!(email.endsWith("@gmail.com") || email.endsWith("@hotmail.com") || email.endsWith("@outlook.com"))) {
                 throw new IllegalArgumentException("Solo se permiten correos de Gmail, Hotmail o Outlook.");
+            }else if (empleado.getNombre_empleado() == null || empleado.getNombre_empleado().trim().isEmpty() ||
+                    empleado.getApellido_empleado() == null || empleado.getApellido_empleado().trim().isEmpty() ||
+                    empleado.getPuesto_empleado() == null || empleado.getPuesto_empleado().trim().isEmpty() ||
+                    empleado.getEmail_empleado() == null || empleado.getEmail_empleado().trim().isEmpty()) {
+
+                return ResponseEntity.badRequest().body("Error: Todos los campos son obligatorios y no pueden estar vacíos.");
             }else{
                 createdEmpleado = empleadoService.saveEmpleado(empleado);
             }
