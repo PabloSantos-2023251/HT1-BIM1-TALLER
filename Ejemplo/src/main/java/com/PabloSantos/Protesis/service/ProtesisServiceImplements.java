@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProtesisServiceImplements {
+public class ProtesisServiceImplements implements ProtesisService {
 
     private final ProtesisRepository protesisRepository;
 
@@ -31,14 +31,14 @@ public class ProtesisServiceImplements {
     }
 
     @Override
-    public Protesis updateEmpleado(Integer id, Empleado empleado) {
-        empleado.setId_empleado(id);
-        return empleadoRepository.save(empleado);
+    public Protesis updateProtesis(Integer id, Protesis protesis) {
+        protesis.setId_protesis(id);
+        return protesisRepository.save(protesis);
     }
 
     @Override
-    public void deleteEmpleado(Integer id) {
-        empleadoRepository.deleteById(id);
+    public void deleteProtesis(Integer id) {
+        protesisRepository.deleteById(id);
     }
 
 }
